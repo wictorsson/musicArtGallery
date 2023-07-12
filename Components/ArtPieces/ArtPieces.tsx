@@ -22,7 +22,7 @@ const StyledArtPiecesItem = styled.div`
   }
 `;
 
-export default function ArtPieces({ pieces, onToggleFavorite }) {
+export default function ArtPieces({ pieces, onToggleFavorite, artPiecesInfo }) {
   return (
     <StyledArtPieces>
       {pieces
@@ -35,6 +35,7 @@ export default function ArtPieces({ pieces, onToggleFavorite }) {
               artist={piece.photographer}
               onToggleFavorite={onToggleFavorite}
               slug={piece.id}
+              artPiecesInfo={artPiecesInfo}
             />
           </StyledArtPiecesItem>
         ))}

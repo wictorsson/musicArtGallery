@@ -19,7 +19,11 @@ type Piece = {
   };
 };
 
-export default function ArtPieceDetailsSlug({ data, onToggleFavorite }) {
+export default function ArtPieceDetailsSlug({
+  data,
+  onToggleFavorite,
+  artPiecesInfo,
+}) {
   const router = useRouter();
   const { slug } = router.query;
   const pieceIndex = data.photos.find((piece: Piece) => piece.slug === slug);
@@ -36,6 +40,7 @@ export default function ArtPieceDetailsSlug({ data, onToggleFavorite }) {
         height={pieceIndex.dimensions.height}
         onToggleFavorite={onToggleFavorite}
         slug={pieceIndex.slug}
+        artPiecesInfo={artPiecesInfo}
       />
     </div>
   );

@@ -10,7 +10,11 @@ type DataObject = {
   id: number;
 };
 
-export default function SpotlightPage({ data, onToggleFavorite }) {
+export default function SpotlightPage({
+  data,
+  onToggleFavorite,
+  artPiecesInfo,
+}) {
   function getRandomElement(array: DataObject[]) {
     return array[Math.floor(Math.random() * array.length)];
   }
@@ -23,6 +27,7 @@ export default function SpotlightPage({ data, onToggleFavorite }) {
         artist={randomObject.photographer}
         onToggleFavorite={onToggleFavorite}
         slug={randomObject.id}
+        artPiecesInfo={artPiecesInfo}
       />
     </div>
   );

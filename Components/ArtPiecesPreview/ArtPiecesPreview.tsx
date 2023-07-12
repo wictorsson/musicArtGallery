@@ -56,6 +56,8 @@ export default function ArtPiecesPreview({
   artist,
   onToggleFavorite,
   slug,
+
+  artPiecesInfo,
 }) {
   return (
     <StyledPieces>
@@ -69,6 +71,7 @@ export default function ArtPiecesPreview({
           <FavoriteButton
             onToggleFavorite={onToggleFavorite}
             isFavorite={slug}
+            artPiecesInfo={artPiecesInfo}
           />
         </StyledContent>
       </StyledArtPiece>

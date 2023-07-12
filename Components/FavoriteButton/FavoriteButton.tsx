@@ -11,10 +11,21 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default function FavoriteButton({ isFavorite, onToggleFavorite }) {
+export default function FavoriteButton({
+  isFavorite,
+  onToggleFavorite,
+  artPiecesInfo,
+}) {
+  const isFavoriteClickedSlug = artPiecesInfo.some(
+    (artPiece) =>
+      artPiece.clickedSlug === isFavorite && artPiece.isFavorite === true
+  );
+
   return (
     <div>
-      <Button onClick={() => onToggleFavorite(isFavorite)}>🤍</Button>
+      <Button onClick={() => onToggleFavorite(isFavorite)}>
+        {isFavoriteClickedSlug ? "❤️" : "🤍"}
+      </Button>
     </div>
   );
 }

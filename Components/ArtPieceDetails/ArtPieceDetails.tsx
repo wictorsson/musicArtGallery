@@ -42,12 +42,17 @@ export default function ArtPieceDetails({
   height,
   onToggleFavorite,
   slug,
+  artPiecesInfo,
 }) {
   return (
     <div>
       <StyledPieces>
         <StyledImage src={image} alt={"image"} width={width} height={height} />
-        <FavoriteButton onToggleFavorite={onToggleFavorite} isFavorite={slug} />
+        <FavoriteButton
+          onToggleFavorite={onToggleFavorite}
+          isFavorite={slug}
+          artPiecesInfo={artPiecesInfo}
+        />
         <StyledInfo>
           <ul>
             <li>{artist}</li>

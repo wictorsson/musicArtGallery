@@ -37,7 +37,13 @@ const StyledTitle = styled.div`
   flex-direction: column;
 `;
 
-export default function Spotlight({ image, artist, onToggleFavorite, slug }) {
+export default function Spotlight({
+  image,
+  artist,
+  onToggleFavorite,
+  slug,
+  artPiecesInfo,
+}) {
   return (
     <StyledPieces>
       <StyledImageContainer>
@@ -45,7 +51,11 @@ export default function Spotlight({ image, artist, onToggleFavorite, slug }) {
       </StyledImageContainer>
       <StyledContent>
         <StyledTitle>Photo</StyledTitle> <span>{artist}</span>
-        <FavoriteButton onToggleFavorite={onToggleFavorite} isFavorite={slug} />
+        <FavoriteButton
+          onToggleFavorite={onToggleFavorite}
+          isFavorite={slug}
+          artPiecesInfo={artPiecesInfo}
+        />
       </StyledContent>
     </StyledPieces>
   );

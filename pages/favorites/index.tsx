@@ -20,17 +20,8 @@ export default function Index({
   data,
   onToggleFavorite,
 }: Props) {
-  console.log(data.photos);
-  console.log(artPiecesInfo);
-
-  // artPiecesInfo.map((piece, index) => {
-  //   console.log(`Element ${index + 1}:`, piece.clickedSlug);
-  //   return null; // Returning null to satisfy the map function requirement
-  // });
-  // data.photos.map((piece, index) => {
-  //   console.log(`Element ${index + 1}:`, piece.id);
-  //   return null; // Returning null to satisfy the map function requirement
-  // });
+  //console.log(data.photos);
+  //console.log(artPiecesInfo);
 
   const filteredData = data.photos.filter((photo) => {
     return artPiecesInfo.some(
@@ -39,14 +30,7 @@ export default function Index({
     );
   });
 
-  //   const filteredData = data.photos.filter((photo) =>
-  //   artPiecesInfo.some(
-  //     (pieceObject) =>
-  //       pieceObject.clickedSlug === photo.id && pieceObject.isFavorite
-  //   )
-  // );
-
-  console.log("filtered", filteredData);
+  //console.log("filtered", filteredData);
   return (
     <div>
       <li style={{ listStyle: "none" }}>
@@ -54,6 +38,7 @@ export default function Index({
           <ArtPieces
             pieces={filteredData}
             onToggleFavorite={onToggleFavorite}
+            artPiecesInfo={artPiecesInfo}
           />
         ) : (
           <div>No art pieces to display</div>
