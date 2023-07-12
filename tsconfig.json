@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "Components/ArtPieceDetails/ArtPieceDetails.tsx",
+    "Components/ArtPieces/ArtPieces.tsx",
+    "Components/Navigation/Navigation.tsx",
+    "Components/Spotlight/spotlight.tsx",
+    "Components/FavoriteButton/FavoriteButton.tsx"
+  ],
+  "exclude": ["node_modules"]
+}
