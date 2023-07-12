@@ -11,6 +11,7 @@ type Piece = {
   height: number;
   onToggleFavorite: (slug: string) => void;
   slug: string;
+  artPiecesInfo: string;
 };
 
 type Props = {
@@ -38,6 +39,7 @@ export default function RenderArtPieces({ data, onToggleFavorite }: Props) {
           height={piece.height}
           onToggleFavorite={piece.onToggleFavorite}
           slug={piece.slug}
+          artPiecesInfo={piece.artPiecesInfo}
         />
       ))}
     </div>
