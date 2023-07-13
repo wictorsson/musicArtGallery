@@ -46,7 +46,7 @@ export default function Navigation() {
     <div>
       <StyledHeader>
         <StyledNav>
-          <Link href="../art-pieces">Pieces</Link>
+          <Link href="../art-pieces">Gallery</Link>
           <Link href="../">Spotlight</Link>
           <Link href="../favorites">Favorites</Link>
         </StyledNav>
